@@ -1,11 +1,14 @@
+using General.Entities;
 using General.Entities.GeneralModels;
+using General.NetCore.Data;
+using General.Services.General.EntityServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using General.NetCore.Extensions;
 namespace General.Web
 {
     public class Startup
@@ -22,6 +25,12 @@ namespace General.Web
         {
             services.AddControllersWithViews();
             services.AddDbContext<CoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Defaultconnection")));
+            //单个注入
+           // services.AddTransient<ICategoryService,CategoryService>();
+            //泛型注入
+            //services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            //程序集注入
+            services.AddAssembly("General.Services");
         }
 
      

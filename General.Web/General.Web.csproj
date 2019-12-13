@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\General.Entities\General.Entities.csproj" />
+    <ProjectReference Include="..\General.NetCore\General.NetCore.csproj" />
+    <ProjectReference Include="..\General.Services\General.Services.csproj" />
   </ItemGroup>
 
 </Project>

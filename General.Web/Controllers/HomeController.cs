@@ -1,24 +1,26 @@
 ﻿using General.Entities.GeneralModels;
+using General.NetCore.Data;
+using General.Services.General.EntityServices;
 using General.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using System.Linq;
 
 namespace General.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly CoreContext _coreContext;
-
-        public HomeController(CoreContext coreContext)
+        // private readonly IRepository<Category> _repository;
+        //   private readonly ICategoryService _categoryService;
+        public HomeController(ICategoryService categoryService)
         {
-          
-            this._coreContext = coreContext;
+            // this._repository = repository;
+            //  this._categoryService = categoryService;
         }
 
         public IActionResult Index()
         {
-            var sss = _coreContext.Category.ToList();
+            // _categoryService.Add(new Category { });
+            //_repository.Add(new Category { Name = "6666", SysResource = "6666", FatherResource = "666" });
             return View();
         }
 
