@@ -1,23 +1,24 @@
 ﻿using General.Entities.GeneralModels;
-using GeneralSysManagement.Models;
+using General.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Linq;
 
-namespace GeneralSysManagement.Controllers
+namespace General.Web.Controllers
 {
     public class HomeController : Controller
     {
-
         private readonly CoreContext _coreContext;
 
         public HomeController(CoreContext coreContext)
         {
+          
             this._coreContext = coreContext;
         }
 
         public IActionResult Index()
         {
+            var sss = _coreContext.Category.ToList();
             return View();
         }
 

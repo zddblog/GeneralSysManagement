@@ -6,25 +6,25 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace GeneralSysManagement
+namespace General.Web
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        //此方法由运行时调用。使用此方法将服务添加到容器。
+        public IConfiguration Configuration { get; }
+
+      
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
             services.AddDbContext<CoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Defaultconnection")));
         }
 
-        //此方法由运行时调用。使用此方法配置HTTP请求管道。
+     
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
