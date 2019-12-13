@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralSysManagement", "GeneralSysManagement\GeneralSysManagement.csproj", "{EDFE5A3F-28A5-423D-A786-52C2883A4239}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneralSysManagement", "GeneralSysManagement\GeneralSysManagement.csproj", "{EDFE5A3F-28A5-423D-A786-52C2883A4239}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General.UI", "General.UI", "{4ACE2112-0782-4AFA-9049-FAD9348C5641}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General.Domain", "General.Domain", "{CA91E6C7-4F01-4891-98B7-9B91829A7D19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain.Entities 实体层", "Domain.Entities 实体层", "{DD6AC91C-0432-4D41-B92D-BD8EFFC13BC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.Entities", "General.Entities\General.Entities.csproj", "{5FECD62D-6469-461C-8245-2276E3FAD82C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +23,18 @@ Global
 		{EDFE5A3F-28A5-423D-A786-52C2883A4239}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDFE5A3F-28A5-423D-A786-52C2883A4239}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDFE5A3F-28A5-423D-A786-52C2883A4239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FECD62D-6469-461C-8245-2276E3FAD82C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FECD62D-6469-461C-8245-2276E3FAD82C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FECD62D-6469-461C-8245-2276E3FAD82C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FECD62D-6469-461C-8245-2276E3FAD82C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EDFE5A3F-28A5-423D-A786-52C2883A4239} = {4ACE2112-0782-4AFA-9049-FAD9348C5641}
+		{DD6AC91C-0432-4D41-B92D-BD8EFFC13BC8} = {CA91E6C7-4F01-4891-98B7-9B91829A7D19}
+		{5FECD62D-6469-461C-8245-2276E3FAD82C} = {DD6AC91C-0432-4D41-B92D-BD8EFFC13BC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D31594A-FE2C-4643-A943-6793FE3FE517}

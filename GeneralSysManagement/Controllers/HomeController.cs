@@ -1,17 +1,19 @@
-﻿using GeneralSysManagement.Models;
+﻿using General.Entities.GeneralModels;
+using GeneralSysManagement.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using System.Linq;
 
 namespace GeneralSysManagement.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly CoreContext _coreContext;
+
+        public HomeController(CoreContext coreContext)
         {
-            _logger = logger;
+            this._coreContext = coreContext;
         }
 
         public IActionResult Index()

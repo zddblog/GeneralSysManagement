@@ -1,5 +1,7 @@
+using General.Entities.GeneralModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,17 +10,18 @@ namespace GeneralSysManagement
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         //此方法由运行时调用。使用此方法将服务添加到容器。
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<CoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Defaultconnection")));
         }
 
         //此方法由运行时调用。使用此方法配置HTTP请求管道。
