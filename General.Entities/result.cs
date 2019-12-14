@@ -8,5 +8,5 @@ namespace General.Entities
     {
         public string salt { get; set; }
         public string hash { get; set; }
-    }
+    } 
 }

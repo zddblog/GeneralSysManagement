@@ -11,15 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain.Entities 实体层",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "General.Entities", "General.Entities\General.Entities.csproj", "{5FECD62D-6469-461C-8245-2276E3FAD82C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.Web", "General.Web\General.Web.csproj", "{6A77B688-9B7A-4A6F-B933-105DA488A58E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "General.Web", "General.Web\General.Web.csproj", "{6A77B688-9B7A-4A6F-B933-105DA488A58E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General.Service", "General.Service", "{3C3BFC0B-A59A-4E29-987A-39744158310C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.Services", "General.Services\General.Services.csproj", "{8D2FB5CD-52C4-4083-82C9-8C6BACADE2E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "General.Services", "General.Services\General.Services.csproj", "{8D2FB5CD-52C4-4083-82C9-8C6BACADE2E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General.Core", "General.Core", "{1414D0CC-BB4F-4AA5-87F6-C9FE2A948DB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.NetCore", "General.NetCore\General.NetCore.csproj", "{79E99B0D-CAFB-4FAC-A8A6-02E0B7B32446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "General.NetCore", "General.NetCore\General.NetCore.csproj", "{79E99B0D-CAFB-4FAC-A8A6-02E0B7B32446}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

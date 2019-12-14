@@ -2,15 +2,43 @@
     Layout = null;
 }
 @model General.Entities.GeneralModels.SysUser
-    <script src="~/js/MD5.js"></script>
+<script src="~/js/MD5.js"></script>
+<link href="~/layui/css/layui.css" rel="stylesheet" />
+<script src="~/layui/layui.js"></script>
 <script>
     function MD5ss() {
-        document.getElementById("Password").value= hex_md5(document.getElementById("Password").value);
+        document.getElementById("Password").value = hex_md5(document.getElementById("Password").value);
     }
 </script>
-    <form  asp-action="Login" method="post">
-        <input type="text" asp-for="Account" />
-      
-        <input type="password" id="Password" asp-for="Password" />
-        <button type="submit" onclick="MD5ss();">提交</button>
-    </form>
+<form  asp-action="Login" method="post">
+    <div class="layui-form-item">
+        <label class="layui-form-label">账号</label>
+        <div class="layui-input-block">
+            <input type="text"  asp-for="Account" required lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-inline">
+            <input type="password" id="Password"  asp-for="Password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo" type="submit" onclick="MD5ss();">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+
+@*<script>
+    //Demo
+    layui.use('form', function () {
+        var form = layui.form;
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>*@

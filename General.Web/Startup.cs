@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using General.NetCore.Extensions;
+using General.NetCore;
+
 namespace General.Web
 {
     public class Startup
@@ -33,7 +35,7 @@ namespace General.Web
             //services.AddAssembly("General.Services");
         }
 
-     
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
