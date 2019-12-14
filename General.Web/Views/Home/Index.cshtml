@@ -1,8 +1,16 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@model General.Entities.GeneralModels.SysUser
+    <script src="~/js/MD5.js"></script>
+<script>
+    function MD5ss() {
+        document.getElementById("Password").value= hex_md5(document.getElementById("Password").value);
+    }
+</script>
+    <form  asp-action="Login" method="post">
+        <input type="text" asp-for="Account" />
+      
+        <input type="password" id="Password" asp-for="Password" />
+        <button type="submit" onclick="MD5ss();">提交</button>
+    </form>

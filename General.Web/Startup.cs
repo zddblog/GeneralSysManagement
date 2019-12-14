@@ -28,9 +28,9 @@ namespace General.Web
             //单个注入
            // services.AddTransient<ICategoryService,CategoryService>();
             //泛型注入
-            //services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             //程序集注入
-            services.AddAssembly("General.Services");
+            //services.AddAssembly("General.Services");
         }
 
      

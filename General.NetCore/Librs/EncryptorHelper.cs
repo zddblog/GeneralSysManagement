@@ -8,7 +8,7 @@ namespace General.NetCore.Librs
     {
 
         /// <summary>
-        /// Md5加密（32位大写）
+        /// Md5加密（32位小写）
         /// </summary>
         /// <param name="inputValue"></param>
         /// <returns></returns>
@@ -18,12 +18,12 @@ namespace General.NetCore.Librs
             {
                 var result = md5.ComputeHash(Encoding.UTF8.GetBytes(inputValue));
                 var strResult = BitConverter.ToString(result);
-                return strResult.Replace("-", "");
+                return strResult.Replace("-", "").ToLower() ;
             }
         }
 
         /// <summary>
-        /// Md5加密（16位大写）
+        /// Md5加密（16位小写）
         /// </summary>
         /// <param name="inputValue"></param>
         /// <returns></returns>
@@ -39,7 +39,7 @@ namespace General.NetCore.Librs
                 {
                     builder.Append(data[i].ToString("X2"));
                 }
-                return builder.ToString().Substring(8, 16);
+                return builder.ToString().Substring(8, 16).ToLower();
             }
         }
     }
